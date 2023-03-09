@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap');
 
+/*kleurpalet: https://coolors.co/f9c48b-f69051-f26d40-260803-fdefec*/
+
+/*
+Peach:              #F9C48B
+Atomic tangerine:   #F69051
+Burnt Sienna:       #F26D40
+Black bean:         #260803
+Seashell:           #FDEFEC
+*/
+
 /*////////////////////////////////////////////////////////////////////////
 Table of Contents:
     1. Global Styles
@@ -12,24 +22,98 @@ Table of Contents:
     1. Global Styles
 ////////////////////////*/
 
+/*CSS reset*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+html {
+  font-size: 12px;
+}
+
+:root {
+  --bg-color-small:   #F9C48B;
+  --bg-color-medium:  #F69051;
+  --bg-color-large:   #F26D40;
+  --color-shadow:     #260803;
+  --bg-color-section: #FDEFEC;
+  --font-size-small:  12px;
+  --font-size-medium: 14px;
+  --font-size-large:  16px;
+
+}
+
 body {
     font-family: 'Dosis', sans-serif;
+    color: var(--color-font);
+    background-color: var(--bg-color-small);
     font-weight: 400;
+    /*font-size: var(--font-size-small);*/
 }
+
+img {
+  width: 100%;
+}
+
 
 /*////////////////////////
     2. Typography
 ////////////////////////*/
 
+h2 {
+  margin: 0 0 .5rem 0;
+}
 
+p {
+  margin: .75rem 0;
+}
 
 /*////////////////////////
     3. Areas
 ////////////////////////*/
+.card-section {
+  background-color: var(--bg-color-section);
+  padding: 2rem;
+  margin: 1.5rem;
+  border-radius: .5rem;
+  box-shadow: 0 .0625rem .5rem var(--color-shadow);
 
+}
 
 
 
 /*////////////////////////
-    2. Media Queries
+    4. Media Queries
 ////////////////////////*/
+
+/*@media screen and (min-width: 576px) {*/
+/*  p {*/
+/*    font-size: 12px;*/
+/*  }*/
+/*}*/
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: var(--font-size-medium);
+  }
+
+  body {
+    background-color: var(--bg-color-medium);
+  }
+
+
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: var(--font-size-large);
+  }
+
+  body {
+    background-color: var(--bg-color-large);
+  }
+
+}
